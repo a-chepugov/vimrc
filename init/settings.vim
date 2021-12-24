@@ -1,73 +1,93 @@
-set noswapfile
-set nobackup
-set nowritebackup
-set autoread
-
 "" windows
-set winminwidth=5
+set winminwidth=10
 set splitright
 set splitbelow
 
 "" buffers
 set hidden
 
-"" menu
+" indentation
+set autoindent
+set noexpandtab
+set smarttab
+"set tabstop=8
+"set softtabstop=0
+"set shiftwidth=0
+
+"" search
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+
+"" perfomance
+set lazyredraw
+
+"" text render
+set display+=lastline
+set encoding=utf-8
+syntax on
+set linebreak
+set scrolloff=3
+set nowrap
+
+"" interface
+set showtabline=2
+set laststatus=2
+set ruler
 set wildmenu
 set wildmode=full
+set wildcharm=<Tab>
+
+set termguicolors
+colorscheme koehler
+set background=dark
+
+set guioptions -=T
+
+set guicursor=
+let &t_SI.="\e[5 q"
+let &t_SR.="\e[3 q"
+let &t_EI.="\e[1 q"
+set cursorline
+set cursorcolumn
+
+set mouse=a
+set noerrorbells
+set visualbell
+set title
+set colorcolumn=120
+set number relativenumber
+set showcmd
+set showmode
+
+"" folding
+set foldmethod=syntax
+set nofoldenable
+
+"" misc
+set autoread
+set backspace=indent,eol,start
+set confirm
+set nopaste
+set matchpairs+=<:>,«:»
+set clipboard=unnamedplus
 
 "" filetype related config
 filetype on
 filetype indent on
 filetype plugin on
 
-set encoding=utf-8
+"" undo
+let output = system('mkdir -p $HOME/.cache/vim/undo')
+set undodir=$HOME/.cache/vim/undo
+set undolevels=5000
+set undofile
+"" backup
+let output = system('mkdir -p $HOME/.cache/vim/backup')
+set backupdir=~/.cache/vim/backup
+"" swap
+let output = system('mkdir -p $HOME/.cache/vim/swap')
+set dir=~/.cache/vim/swap
 
-"" indentation
-set showtabline=2
-set noexpandtab
-"set tabstop=4
-"set softtabstop=0
-set shiftwidth=0
-set autoindent
-
-"" search
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-
-"" set cursor highlighting
-set cursorline
-"set cursorcolumn
-
-set colorcolumn=121
-set nowrap
-set number
-set ruler
-set showcmd
-set showmode
-
-set background=dark
-colorscheme koehler
-"set visualbell
-"set laststatus=0
-
-syntax on
-"set foldmetod=syntax
-
-set backspace=indent,eol,start
-
-set matchpairs+=<:>,«:»
-
-set mouse=a
-
-set clipboard=unnamedplus
-
-
-if has('persistent_undo')
-	let output = system('mkdir -p $HOME/.cache/vim/undo')
-	set undodir=$HOME/.cache/vim/undo
-	set undolevels=5000
-	set undofile
-endif
 
