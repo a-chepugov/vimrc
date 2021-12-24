@@ -64,11 +64,11 @@ noremap <S-F12> :Lexplore %:p:h<CR>
 map <S-M-F12> :lcd %:p:h<CR> :below terminal<CR>
 map <M-F12> :below terminal<CR>
 
-
-map <M-x>. :set number relativenumber!<CR>
+map <leader>vr :source $MYVIMRC<CR>
+map <leader>. :set number relativenumber!<CR>
 
 "" completion
-imap <M-x>z <C-n>
-imap <M-x>c <C-x><C-o>
+imap <leader>q <C-n>
+imap <leader>c <C-x><C-o>
 set omnifunc=syntaxcomplete#Complete
 
