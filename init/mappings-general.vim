@@ -3,7 +3,6 @@ nmap <nowait> <A-[> :bprevious<CR>
 nmap <nowait> <A-]> :bnext<CR>
 nmap <nowait> <A-q> :bdelete<CR>
 
-
 "" tabs
 nmap <nowait> <C-Tab> :tabn<CR>
 nmap <nowait> <C-S-Tab> :tabp<CR>
@@ -48,12 +47,28 @@ map <A-Right> :cnext<CR>
 nnoremap <BS> i<BS><ESC>`^
 nnoremap <Del> i<Del><ESC>`^
 imap <S-Tab> <C-d>
-
+map <S-Insert> :put<CR>
+imap <S-Insert> <C-R>*
+cmap <S-Insert> <C-R>*
 nnoremap <C-c> <Esc>
 map <C-LeftMouse> <LeftMouse>gf
 
-map <S-F1> :vimgrep 
+
+map <S-F1> :vimgrep<F2>
+map <F2> :write<CR>
+imap <F2> <C-o>:write<CR>
+map <C-S-F10> :buffers<CR>
+map <C-S-F11> :marks<CR>
+map <F12> :Lexplore<CR>
+noremap <S-F12> :Lexplore %:p:h<CR>
+map <S-M-F12> :lcd %:p:h<CR> :below terminal<CR>
+map <M-F12> :below terminal<CR>
+
+
+map <M-x>. :set number relativenumber!<CR>
 
 "" completion
-imap <C-Space> <C-n>
+imap <M-x>z <C-n>
+imap <M-x>c <C-x><C-o>
+set omnifunc=syntaxcomplete#Complete
 

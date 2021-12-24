@@ -16,8 +16,7 @@ Plug 'jeetsukumaran/vim-buffergator'
 Plug 'airblade/vim-gitgutter'
 
 "" Работа с проектом
-Plug 'tpope/vim-projectionist'
-"Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 "" Нечеткий поиск
 Plug 'ddrscott/vim-side-search'
@@ -43,17 +42,9 @@ call plug#end()
 "autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 
 "" mappings
-map <F2>  :write<CR>
 map <F10> :BuffergatorToggle<CR>
-map <F11> :<C-U>call signature#mark#Toggle("next")<CR>
-map <C-F11> :SignatureToggleSigns<CR>
-map <S-F11> :marks<CR>
-map <F12> :Lexplore<CR>
-noremap <S-F12> :Lexplore %:p:h<CR>
+map <F11> :call signature#mark#Toggle("next")<CR>
+map <S-F11> :SignatureToggleSigns<CR>
 
-map <Del>map <A-F9> :below terminal<CR>
-map <A-F12> :below terminal<CR>
-
-
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+noremap <silent> <leader> :WhichKey '<Space>'<CR>
 
