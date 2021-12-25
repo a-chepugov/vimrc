@@ -8,49 +8,54 @@ nmap <nowait> <C-Tab> :tabn<CR>
 nmap <nowait> <C-S-Tab> :tabp<CR>
 nmap <nowait> <S-F10> :tab ball<CR>
 
-map <nowait> <A-1> :1tabnext<CR>
-map <nowait> <A-2> :2tabnext<CR>
-map <nowait> <A-3> :3tabnext<CR>
-map <nowait> <A-4> :4tabnext<CR>
-map <nowait> <A-5> :5tabnext<CR>
-map <nowait> <A-6> :6tabnext<CR>
-map <nowait> <A-7> :7tabnext<CR>
-map <nowait> <A-8> :8tabnext<CR>
-map <nowait> <A-9> :9tabnext<CR>
+nmap <nowait> <A-1> :1tabnext<CR>
+nmap <nowait> <A-2> :2tabnext<CR>
+nmap <nowait> <A-3> :3tabnext<CR>
+nmap <nowait> <A-4> :4tabnext<CR>
+nmap <nowait> <A-5> :5tabnext<CR>
+nmap <nowait> <A-6> :6tabnext<CR>
+nmap <nowait> <A-7> :7tabnext<CR>
+nmap <nowait> <A-8> :8tabnext<CR>
+nmap <nowait> <A-9> :9tabnext<CR>
 
 "" windows
-map <nowait> <A-0> :only<CR>
-map <nowait> <A-h> :wincmd h<CR>
-map <nowait> <A-j> :wincmd j<CR>
-map <nowait> <A-k> :wincmd k<CR>
-map <nowait> <A-l> :wincmd l<CR>
+nmap <nowait> <A-o> :only<CR>
+nmap <nowait> <A-h> :wincmd h<CR>
+nmap <nowait> <A-j> :wincmd j<CR>
+nmap <nowait> <A-k> :wincmd k<CR>
+nmap <nowait> <A-l> :wincmd l<CR>
 
-map <nowait> <A-H> :wincmd H<CR>
-map <nowait> <A-J> :wincmd J<CR>
-map <nowait> <A-K> :wincmd K<CR>
-map <nowait> <A-L> :wincmd L<CR>
+nmap <nowait> <A-H> :wincmd H<CR>
+nmap <nowait> <A-J> :wincmd J<CR>
+nmap <nowait> <A-K> :wincmd K<CR>
+nmap <nowait> <A-L> :wincmd L<CR>
 
-map <nowait> <A--> :wincmd -<CR>
-map <nowait> <A-=> :wincmd +<CR>
-map <nowait> <A-<> :wincmd <<CR>
-map <nowait> <A->> :wincmd ><CR>
+nmap <nowait> <A--> :wincmd -<CR>
+nmap <nowait> <A-=> :wincmd +<CR>
+nmap <nowait> <A-<> :wincmd <<CR>
+nmap <nowait> <A->> :wincmd ><CR>
 
 "noremap <Up> <NOP>
 "noremap <Down> <NOP>
 "noremap <Left> <NOP>
 "noremap <Right> <NOP>
 
-map <A-Left> :cprev<CR>
-map <A-Right> :cnext<CR>
+nmap <A-Left> :cprev<CR>
+nmap <A-Right> :cnext<CR>
 
 "" behevior normalize
-nnoremap <BS> i<BS><ESC>`^
-nnoremap <Del> i<Del><ESC>`^
+nnoremap <BS> X
 imap <S-Tab> <C-d>
-map <S-Insert> :put<CR>
+
+nmap <S-Insert> :put *<CR>
+vmap <S-Insert> p
 imap <S-Insert> <C-R>*
 cmap <S-Insert> <C-R>*
-nnoremap <C-c> <Esc>
+nmap <C-Insert> :yank *<CR>
+vmap <C-Insert> y
+imap <C-Insert> <C-o>yy
+cmap <C-Insert> <C-o>yy
+
 map <C-LeftMouse> <LeftMouse>gf
 
 
@@ -59,12 +64,9 @@ map <F2> :write<CR>
 imap <F2> <C-o>:write<CR>
 map <C-S-F10> :buffers<CR>
 map <C-S-F11> :marks<CR>
-map <F12> :Lexplore<CR>
-noremap <S-F12> :Lexplore %:p:h<CR>
-map <S-M-F12> :lcd %:p:h<CR> :below terminal<CR>
-map <M-F12> :below terminal<CR>
 
 map <leader>vr :source $MYVIMRC<CR>
+map <leader>vo :tabnew $MYVIMRC<CR>
 map <leader>. :set number relativenumber!<CR>
 
 "" completion
