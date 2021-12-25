@@ -43,7 +43,7 @@ nmap <nowait> <A->> :wincmd ><CR>
 nmap <A-Left> :cprev<CR>
 nmap <A-Right> :cnext<CR>
 
-"" behevior normalize
+"" behavior normalize
 nnoremap <BS> X
 imap <S-Tab> <C-d>
 
