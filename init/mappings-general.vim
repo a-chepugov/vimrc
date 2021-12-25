@@ -62,6 +62,7 @@ map <C-LeftMouse> <LeftMouse>gf
 map <S-F1> :vimgrep<F2>
 map <F2> :write<CR>
 imap <F2> <C-o>:write<CR>
+map <C-S-F9> :registers<CR>
 map <C-S-F10> :buffers<CR>
 map <C-S-F11> :marks<CR>
 
