@@ -44,7 +44,7 @@ set mouse=a
 set noerrorbells
 set visualbell
 set title
-set colorcolumn=121
+set colorcolumn=120
 set number relativenumber
 set showcmd
 set showmode
