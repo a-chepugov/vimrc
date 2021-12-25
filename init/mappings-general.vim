@@ -47,17 +47,16 @@ nmap <A-Right> :cnext<CR>
 nnoremap <BS> X
 imap <S-Tab> <C-d>
 
-nmap <S-Insert> :put *<CR>
+nmap <S-Insert> :put +<CR>
 vmap <S-Insert> p
-imap <S-Insert> <C-R>*
-cmap <S-Insert> <C-R>*
-nmap <C-Insert> :yank *<CR>
+imap <S-Insert> <C-R>+
+cmap <S-Insert> <C-R>+
+nmap <C-Insert> :yank +<CR>
 vmap <C-Insert> y
 imap <C-Insert> <C-o>yy
 cmap <C-Insert> <C-o>yy
 
 map <C-LeftMouse> <LeftMouse>gf
-
 
 map <S-F1> :vimgrep<F2>
 map <F2> :write<CR>
