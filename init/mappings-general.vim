@@ -76,5 +76,5 @@ set omnifunc=syntaxcomplete#Complete
 
 "" show hidden symbols
 nmap <leader>l :set list!<CR>
-set listchars=tab:▸-,eol:¬,space:•,lead:→,trail:←,extends:↗,precedes:↘,nceal:⇶,nbsp:‗
+set listchars=tab:<->,eol:$,space:.,extends:>,precedes:<,conceal:#,nbsp:_
 
