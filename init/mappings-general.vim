@@ -53,8 +53,8 @@ nmap <nowait> <A-]> :tabmove +<CR>
 
 
 "" behavior normalize
-nnoremap <BS> X
-imap <S-Tab> <C-d>
+nnoremap <nowait> <BS> X
+imap <nowait> <S-Tab> <C-d>
 
 nmap <S-Insert> :put +<CR>
 vmap <S-Insert> p
@@ -84,14 +84,14 @@ map <C-LeftMouse> <LeftMouse>gf
 map <S-F1> :vimgrep<F2>
 map <F2> :write<CR>
 imap <F2> <C-o>:write<CR>
-map <C-S-F9> :registers<CR>
-map <C-S-F10> :buffers<CR>
+map <C-S-F5> :registers<CR>
 map <F9> :emenu <Tab>
+nmap <F10> :buffers<CR>
 map <C-S-F11> :marks<CR>
 
 map <leader>vr :source $MYVIMRC<CR>
 map <leader>vo :tabnew $MYVIMRC<CR>
-map <leader>. :set number relativenumber!<CR>
+map <leader>n :set number relativenumber!<CR>
 
 "" completion
 imap <leader>q <C-n>
