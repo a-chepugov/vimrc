@@ -41,14 +41,6 @@ nmap <nowait> <A-=> :wincmd +<CR>
 nmap <nowait> <A-<> :wincmd <<CR>
 nmap <nowait> <A->> :wincmd ><CR>
 
-"noremap <Up> <NOP>
-"noremap <Down> <NOP>
-"noremap <Left> <NOP>
-"noremap <Right> <NOP>
-
-nmap <A-Left> :cprev<CR>
-nmap <A-Right> :cnext<CR>
-
 "" behavior normalize
 nnoremap <BS> X
 imap <S-Tab> <C-d>
@@ -62,6 +54,17 @@ vmap <C-Insert> y
 imap <C-Insert> <C-o>yy
 cmap <C-Insert> <C-o>yy
 
+"noremap <Up> <NOP>
+"noremap <Down> <NOP>
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
+noremap <C-S-Up> ddkP
+noremap <C-S-Down> ddp
+"noremap <C-S-Left> <NOP>
+"noremap <C-S-Right> <NOP>
+
+nmap <A-Left> :cprev<CR>
+nmap <A-Right> :cnext<CR>
 map <C-LeftMouse> <LeftMouse>gf
 
 map <S-F1> :vimgrep<F2>
