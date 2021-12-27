@@ -2,11 +2,17 @@
 nmap <nowait> <A-[> :bprevious<CR>
 nmap <nowait> <A-]> :bnext<CR>
 nmap <nowait> <A-q> :bdelete<CR>
+imap <nowait> <A-[> <c-o>:bprevious<CR>
+imap <nowait> <A-]> <c-o>:bnext<CR>
+imap <nowait> <A-q> <c-o>:bdelete<CR>
 
 "" tabs
 nmap <nowait> <C-Tab> :tabn<CR>
 nmap <nowait> <C-S-Tab> :tabp<CR>
 nmap <nowait> <S-F10> :tab ball<CR>
+imap <nowait> <C-Tab> <c-o>:tabn<CR>
+imap <nowait> <C-S-Tab> <c-o>:tabp<CR>
+imap <nowait> <S-F10> <c-o>:tab ball<CR>
 
 nmap <nowait> <A-1> :1tabnext<CR>
 nmap <nowait> <A-2> :2tabnext<CR>
