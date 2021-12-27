@@ -36,6 +36,7 @@ set laststatus=2
 set ruler
 set wildmenu
 set wildmode=full
+set wildcharm=<Tab>
 colorscheme koehler
 set background=dark
 set cursorline

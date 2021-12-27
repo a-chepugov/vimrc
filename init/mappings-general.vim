@@ -86,6 +86,7 @@ map <F2> :write<CR>
 imap <F2> <C-o>:write<CR>
 map <C-S-F9> :registers<CR>
 map <C-S-F10> :buffers<CR>
+map <F9> :emenu <Tab>
 map <C-S-F11> :marks<CR>
 
 map <leader>vr :source $MYVIMRC<CR>
