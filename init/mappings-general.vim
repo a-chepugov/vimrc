@@ -65,6 +65,9 @@ noremap <C-S-Down> ddp
 
 nmap <A-Left> :cprev<CR>
 nmap <A-Right> :cnext<CR>
+
+nmap n nzz
+nmap N Nzz
 map <C-LeftMouse> <LeftMouse>gf
 
 map <S-F1> :vimgrep<F2>
