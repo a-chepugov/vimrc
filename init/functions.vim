@@ -1,4 +1,5 @@
 source $HOME/.vim/init/lib/editing.vim
 
-nnoremap <leader>ss :call StripTrailingWhitespaces()<CR>
+nnoremap <leader>ws :call StripTrailingWhitespaces()<CR>
+nnoremap <leader>wl :call StripTrailingLines()<CR>
 
