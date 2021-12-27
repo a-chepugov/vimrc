@@ -2,11 +2,17 @@
 nmap <nowait> <A-[> :bprevious<CR>
 nmap <nowait> <A-]> :bnext<CR>
 nmap <nowait> <A-q> :bdelete<CR>
+imap <nowait> <A-[> <c-o>:bprevious<CR>
+imap <nowait> <A-]> <c-o>:bnext<CR>
+imap <nowait> <A-q> <c-o>:bdelete<CR>
 
 "" tabs
 nmap <nowait> <C-Tab> :tabn<CR>
 nmap <nowait> <C-S-Tab> :tabp<CR>
 nmap <nowait> <S-F10> :tab ball<CR>
+imap <nowait> <C-Tab> <c-o>:tabn<CR>
+imap <nowait> <C-S-Tab> <c-o>:tabp<CR>
+imap <nowait> <S-F10> <c-o>:tab ball<CR>
 
 nmap <nowait> <A-1> :1tabnext<CR>
 nmap <nowait> <A-2> :2tabnext<CR>
@@ -35,14 +41,6 @@ nmap <nowait> <A-=> :wincmd +<CR>
 nmap <nowait> <A-<> :wincmd <<CR>
 nmap <nowait> <A->> :wincmd ><CR>
 
-"noremap <Up> <NOP>
-"noremap <Down> <NOP>
-"noremap <Left> <NOP>
-"noremap <Right> <NOP>
-
-nmap <A-Left> :cprev<CR>
-nmap <A-Right> :cnext<CR>
-
 "" behavior normalize
 nnoremap <BS> X
 imap <S-Tab> <C-d>
@@ -56,6 +54,20 @@ vmap <C-Insert> y
 imap <C-Insert> <C-o>yy
 cmap <C-Insert> <C-o>yy
 
+"noremap <Up> <NOP>
+"noremap <Down> <NOP>
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
+noremap <C-S-Up> ddkP
+noremap <C-S-Down> ddp
+"noremap <C-S-Left> <NOP>
+"noremap <C-S-Right> <NOP>
+
+nmap <A-Left> :cprev<CR>
+nmap <A-Right> :cnext<CR>
+
+nmap n nzz
+nmap N Nzz
 map <C-LeftMouse> <LeftMouse>gf
 
 map <S-F1> :vimgrep<F2>
