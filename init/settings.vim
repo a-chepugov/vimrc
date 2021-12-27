@@ -9,10 +9,9 @@ set hidden
 " indentation
 set autoindent
 set noexpandtab
-set shiftwidth=0
-set showtabline=2
+"set tabstop=8
 "set softtabstop=0
-"set tabstop=4
+"set shiftwidth=0
 
 "" search
 set hlsearch
@@ -32,6 +31,7 @@ set scrolloff=3
 set nowrap
 
 "" interface
+set showtabline=2
 set laststatus=2
 set ruler
 set wildmenu
