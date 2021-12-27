@@ -1,5 +1,5 @@
 "" windows
-set winminwidth=5
+set winminwidth=10
 set splitright
 set splitbelow
 
