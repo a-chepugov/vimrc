@@ -74,3 +74,7 @@ imap <leader>q <C-n>
 imap <leader>c <C-x><C-o>
 set omnifunc=syntaxcomplete#Complete
 
+"" show hidden symbols
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸-,eol:¬,space:•,lead:→,trail:←,extends:↗,precedes:↘,nceal:⇶,nbsp:‗
+
