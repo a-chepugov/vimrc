@@ -37,8 +37,8 @@ set ruler
 set wildmenu
 set wildmode=full
 set wildcharm=<Tab>
-colorscheme koehler
-set background=dark
+colorscheme torte
+
 set cursorline
 "set cursorcolumn
 set mouse=a
