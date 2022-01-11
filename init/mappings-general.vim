@@ -1,31 +1,37 @@
 "" buffers
-nmap <nowait> <leader>b :buffers<CR>
+let mapleader = " "
+
+nmap <nowait> <leader>bl :buffers<CR>
 nmap <nowait> <leader>bb :buffers<CR>:buffer 
-nmap <nowait> <A-,> :bprevious<CR>
-nmap <nowait> <A-.> :bnext<CR>
-nmap <nowait> <S-A-q> :bdelete<CR>
-imap <nowait> <A-,> <C-o>:bprevious<CR>
-imap <nowait> <A-.> <C-o>:bnext<CR>
-imap <nowait> <S-A-q> <C-o>:bdelete<CR>
+nmap <nowait> <leader>, :bprevious<CR>
+nmap <nowait> <leader>. :bnext<CR>
+nmap <nowait> <leader>Q :bdelete<CR>
+imap <nowait> <leader>, <C-o>:bprevious<CR>
+imap <nowait> <leader>. <C-o>:bnext<CR>
+imap <nowait> <leader>Q <C-o>:bdelete<CR>
 
 "" windows
-nmap <nowait> <A-q> :close<CR>
-imap <nowait> <A-q> <C-o>:close<CR>
-nmap <nowait> <A-o> :only<CR>
-nmap <nowait> <A-h> :wincmd h<CR>
-nmap <nowait> <A-j> :wincmd j<CR>
-nmap <nowait> <A-k> :wincmd k<CR>
-nmap <nowait> <A-l> :wincmd l<CR>
+nmap <nowait> <leader>q :close<CR>
+imap <nowait> <leader>q <C-o>:close<CR>
+nmap <nowait> <leader>o :only<CR>
+nmap <nowait> <leader>h :wincmd h<CR>
+nmap <nowait> <leader>j :wincmd j<CR>
+nmap <nowait> <leader>k :wincmd k<CR>
+nmap <nowait> <leader>l :wincmd l<CR>
 
-nmap <nowait> <A-H> :wincmd H<CR>
-nmap <nowait> <A-J> :wincmd J<CR>
-nmap <nowait> <A-K> :wincmd K<CR>
-nmap <nowait> <A-L> :wincmd L<CR>
+nmap <nowait> <leader>H :wincmd H<CR>
+nmap <nowait> <leader>J :wincmd J<CR>
+nmap <nowait> <leader>K :wincmd K<CR>
+nmap <nowait> <leader>L :wincmd L<CR>
 
-nmap <nowait> <A--> :wincmd -<CR>
-nmap <nowait> <A-=> :wincmd +<CR>
-nmap <nowait> <A-<> :wincmd <<CR>
-nmap <nowait> <A->> :wincmd ><CR>
+nmap <nowait> <leader>- :wincmd -<CR>
+nmap <nowait> <leader>= :wincmd +<CR>
+nmap <nowait> <leader>< :wincmd <<CR>
+nmap <nowait> <leader>> :wincmd ><CR>
+
+
+nmap <leader>wb :set scrollbind!<CR>
+
 
 "" tabs
 nmap <nowait> <leader>t :tabnew<CR>
@@ -37,19 +43,18 @@ imap <nowait> <C-Tab> <C-o>:tabnext<CR>
 imap <nowait> <C-S-Tab> <C-o>:tabprev<CR>
 imap <nowait> <C-F10> <C-o>:tab ball<CR>
 
-nmap <nowait> <A-1> :1tabnext<CR>
-nmap <nowait> <A-2> :2tabnext<CR>
-nmap <nowait> <A-3> :3tabnext<CR>
-nmap <nowait> <A-4> :4tabnext<CR>
-nmap <nowait> <A-5> :5tabnext<CR>
-nmap <nowait> <A-6> :6tabnext<CR>
-nmap <nowait> <A-7> :7tabnext<CR>
-nmap <nowait> <A-8> :8tabnext<CR>
-nmap <nowait> <A-9> :9tabnext<CR>
+nmap <nowait> <leader>1 :1tabnext<CR>
+nmap <nowait> <leader>2 :2tabnext<CR>
+nmap <nowait> <leader>3 :3tabnext<CR>
+nmap <nowait> <leader>4 :4tabnext<CR>
+nmap <nowait> <leader>5 :5tabnext<CR>
+nmap <nowait> <leader>6 :6tabnext<CR>
+nmap <nowait> <leader>7 :7tabnext<CR>
+nmap <nowait> <leader>8 :8tabnext<CR>
+nmap <nowait> <leader>9 :9tabnext<CR>
 
-nmap <nowait> <A-[> :tabmove -<CR>
-nmap <nowait> <A-]> :tabmove +<CR>
-
+nmap <nowait> <leader>[ :tabmove -<CR>
+nmap <nowait> <leader>] :tabmove +<CR>
 
 
 "" behavior normalize
@@ -74,8 +79,8 @@ noremap <C-S-Down> ddp
 "noremap <C-S-Left> <NOP>
 "noremap <C-S-Right> <NOP>
 
-nmap <A-Left> :cprev<CR>
-nmap <A-Right> :cnext<CR>
+nmap <leader><Left> :cprev<CR>
+nmap <leader><Right> :cnext<CR>
 
 nmap n nzz
 nmap N Nzz
@@ -89,13 +94,15 @@ map <F9> :emenu <Tab>
 nmap <F10> :buffers<CR>
 map <C-S-F11> :marks<CR>
 
-map <leader>vr :source $MYVIMRC<CR>
-map <leader>vo :tabnew $MYVIMRC<CR>
+map <leader>sr :source $MYVIMRC<CR>
+map <leader>so :tabnew $MYVIMRC<CR>
+map <leader>sc :source %<CR>
+
 map <leader>n :set number relativenumber!<CR>
 
 "" completion
-imap <leader>q <C-n>
-imap <leader>c <C-x><C-o>
+imap <leader>c <C-n>
+imap <leader>v <C-x><C-o>
 set omnifunc=syntaxcomplete#Complete
 
 "" show hidden symbols
