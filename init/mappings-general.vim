@@ -102,3 +102,21 @@ set omnifunc=syntaxcomplete#Complete
 nmap <leader>sh :set list!<CR>
 set listchars=tab:<->,eol:$,space:.,extends:>,precedes:<,conceal:#,nbsp:_
 
+
+"" lib
+source $HOME/.vim/init/lib/path.vim
+source $HOME/.vim/init/lib/register.vim
+source $HOME/.vim/init/lib/trim.vim
+
+nmap <leader>ts :call lib#trim#strip_trailing_whitespaces()<CR>
+nmap <leader>tl :call lib#trim#strip_redundant_lines()<CR>
+nmap <leader>tt 
+	\:call lib#trim#strip_redundant_lines()<CR>
+	\:call lib#trim#strip_trailing_whitespaces()<CR>
+
+nmap <silent> <leader>re 
+	\:echo "Enter registry name"<CR>
+	\:call lib#register#edit(getcharstr())<CR>
+
+nmap <leader>pp :call lib#path#pwd_from_buffer()<CR>
+
