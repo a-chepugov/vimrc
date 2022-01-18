@@ -113,6 +113,10 @@ set listchars=tab:<->,eol:$,space:.,extends:>,precedes:<,conceal:#,nbsp:_
 nmap <leader>ds :diffthis<CR>:wincmd w<CR>:diffthis<CR>
 nmap <leader>df :diffoff<CR>:wincmd w<CR>:diffoff<CR>
 
+"" scroll
+nmap <leader>sbs gg:set scrollbind<CR>:set scrollfocus<CR>:wincmd w<CR>gg:set scrollbind<CR>:set scrollfocus<CR>
+nmap <leader>sbf :set noscrollbind<CR>:set noscrollfocus<CR>:wincmd w<CR>:set noscrollbind<CR>:set noscrollfocus<CR>
+
 "" lib
 source $HOME/.vim/init/lib/path.vim
 source $HOME/.vim/init/lib/register.vim
