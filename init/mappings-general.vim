@@ -31,6 +31,7 @@ nmap <nowait> <leader>> :wincmd ><CR>
 
 
 nmap <leader>wb :set scrollbind!<CR>
+nmap <leader>wt <C-W>T
 
 
 "" tabs
