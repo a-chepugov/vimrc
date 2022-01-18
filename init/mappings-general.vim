@@ -109,6 +109,9 @@ set omnifunc=syntaxcomplete#Complete
 nmap <leader>sh :set list!<CR>
 set listchars=tab:<->,eol:$,space:.,extends:>,precedes:<,conceal:#,nbsp:_
 
+"" diff
+nmap <leader>ds :diffthis<CR>:wincmd w<CR>:diffthis<CR>
+nmap <leader>df :diffoff<CR>:wincmd w<CR>:diffoff<CR>
 
 "" lib
 source $HOME/.vim/init/lib/path.vim
