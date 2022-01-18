@@ -5,14 +5,10 @@ nmap <nowait> <leader>bl :buffers<CR>
 nmap <nowait> <leader>bb :buffers<CR>:buffer 
 nmap <nowait> <leader>, :bprevious<CR>
 nmap <nowait> <leader>. :bnext<CR>
-nmap <nowait> <leader>Q :bdelete<CR>
-imap <nowait> <leader>, <C-o>:bprevious<CR>
-imap <nowait> <leader>. <C-o>:bnext<CR>
-imap <nowait> <leader>Q <C-o>:bdelete<CR>
+nmap <nowait> <leader>q :bdelete<CR>
 
 "" windows
-nmap <nowait> <leader>q :close<CR>
-imap <nowait> <leader>q <C-o>:close<CR>
+nmap <nowait> <leader>e :close<CR>
 nmap <nowait> <leader>o :only<CR>
 nmap <nowait> <leader>h :wincmd h<CR>
 nmap <nowait> <leader>j :wincmd j<CR>
