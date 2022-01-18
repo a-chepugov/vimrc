@@ -122,9 +122,9 @@ source $HOME/.vim/init/lib/path.vim
 source $HOME/.vim/init/lib/register.vim
 source $HOME/.vim/init/lib/trim.vim
 
-nmap <leader>ts :call lib#trim#strip_trailing_whitespaces()<CR>
-nmap <leader>tl :call lib#trim#strip_redundant_lines()<CR>
-nmap <leader>tt 
+nmap <leader>es :call lib#trim#strip_trailing_whitespaces()<CR>
+nmap <leader>el :call lib#trim#strip_redundant_lines()<CR>
+nmap <leader>et 
 	\:call lib#trim#strip_redundant_lines()<CR>
 	\:call lib#trim#strip_trailing_whitespaces()<CR>
 
