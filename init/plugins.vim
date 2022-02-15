@@ -13,6 +13,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'jeetsukumaran/vim-buffergator'
 
 "" Метки git
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 "" Работа с проектом
