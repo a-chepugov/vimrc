@@ -37,7 +37,9 @@ set ruler
 set wildmenu
 set wildmode=full
 set wildcharm=<Tab>
-colorscheme torte
+
+colorscheme evening
+set background=dark
 
 set cursorline
 "set cursorcolumn
