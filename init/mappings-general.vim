@@ -115,9 +115,7 @@ nmap <leader>sbs gg:set scrollbind<CR>:set scrollfocus<CR>:wincmd w<CR>gg:set sc
 nmap <leader>sbf :set noscrollbind<CR>:set noscrollfocus<CR>:wincmd w<CR>:set noscrollbind<CR>:set noscrollfocus<CR>
 
 "" lib
-source $HOME/.vim/init/lib/path.vim
-source $HOME/.vim/init/lib/register.vim
-source $HOME/.vim/init/lib/trim.vim
+source $HOME/.vim/init/lib/index.vim
 
 nmap <leader>es :call lib#trim#strip_trailing_whitespaces()<CR>
 nmap <leader>el :call lib#trim#strip_redundant_lines()<CR>
