@@ -129,3 +129,5 @@ nmap <silent> <leader>re
 
 nmap <leader>pp :call lib#path#pwd_from_buffer()<CR>
 
+nmap <silent> <leader>ses :call lib#sessions#save(input("Save session into: ", lib#sessions#DEFAULT_SESSIONS_DIR, "file"))<CR>
+nmap <silent> <leader>ser :call lib#sessions#load(input("Load session from: ", lib#sessions#DEFAULT_SESSIONS_DIR, "file"))<CR>
