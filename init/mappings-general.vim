@@ -76,6 +76,8 @@ noremap <C-S-Down> ddp
 "noremap <C-S-Left> <NOP>
 "noremap <C-S-Right> <NOP>
 
+nmap <leader><Up> :copen<CR>
+nmap <leader><Down> :cclose<CR>
 nmap <leader><Left> :cprev<CR>
 nmap <leader><Right> :cnext<CR>
 
