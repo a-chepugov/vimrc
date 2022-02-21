@@ -20,39 +20,38 @@ nmap <nowait> <leader>J :wincmd J<CR>
 nmap <nowait> <leader>K :wincmd K<CR>
 nmap <nowait> <leader>L :wincmd L<CR>
 
-nmap <nowait> <leader>- :wincmd -<CR>
-nmap <nowait> <leader>= :wincmd +<CR>
-nmap <nowait> <leader>< :wincmd <<CR>
-nmap <nowait> <leader>> :wincmd ><CR>
-
+nmap <leader>== :winc
+nmap <leader>- :wincm
+nmap <leader>= :wincm
+nmap <leader>[ :wincm
+nmap <leader>] :wincm
 
 nmap <leader>wb :set scrollbind!<CR>
 nmap <leader>wt <C-W>T
 
-
 "" tabs
-nmap <nowait> <leader>t :tabnew<CR>
-nmap <nowait> <leader>tq :tabclose<CR>
-nmap <nowait> <C-Tab> :tabnext<CR>
-nmap <nowait> <C-S-Tab> :tabprev<CR>
-nmap <nowait> <C-F10> :tab ball<CR>
-imap <nowait> <C-Tab> <C-o>:tabnext<CR>
-imap <nowait> <C-S-Tab> <C-o>:tabprev<CR>
-imap <nowait> <C-F10> <C-o>:tab ball<CR>
+nmap <leader>t :tabnew<CR>
+nmap <leader>tq :tabclose<CR>
+nmap <C-Tab> :tabnext<CR>
+nmap <C-S-Tab> :tabprev<CR>
+nmap <C-F10> :tab ball<CR>
+imap <C-Tab> <C-o>:tabnext<CR>
+imap <C-S-Tab> <C-o>:tabprev<CR>
+imap <C-F10> <C-o>:tab ball<CR>
 
-nmap <nowait> <leader>1 :1tabnext<CR>
-nmap <nowait> <leader>2 :2tabnext<CR>
-nmap <nowait> <leader>3 :3tabnext<CR>
-nmap <nowait> <leader>4 :4tabnext<CR>
-nmap <nowait> <leader>5 :5tabnext<CR>
-nmap <nowait> <leader>6 :6tabnext<CR>
-nmap <nowait> <leader>7 :7tabnext<CR>
-nmap <nowait> <leader>8 :8tabnext<CR>
-nmap <nowait> <leader>9 :9tabnext<CR>
+nmap <nowait> <leader>1 :tabnext 1<CR>
+nmap <nowait> <leader>2 :tabnext 2<CR>
+nmap <nowait> <leader>3 :tabnext 3<CR>
+nmap <nowait> <leader>4 :tabnext 4<CR>
+nmap <nowait> <leader>5 :tabnext 5<CR>
+nmap <nowait> <leader>6 :tabnext 6<CR>
+nmap <nowait> <leader>7 :tabnext 7<CR>
+nmap <nowait> <leader>8 :tabnext 8<CR>
+nmap <nowait> <leader>9 :tabnext 9<CR>
+nmap <nowait> <leader>0 :tabnext $<CR>
 
-nmap <nowait> <leader>[ :tabmove -<CR>
-nmap <nowait> <leader>] :tabmove +<CR>
-
+nmap <nowait> <leader>( :tabmove -<CR>
+nmap <nowait> <leader>) :tabmove +<CR>
 
 "" behavior normalize
 nnoremap <nowait> <BS> X
