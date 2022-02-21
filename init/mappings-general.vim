@@ -56,7 +56,7 @@ nmap <nowait> <leader>] :tabmove +<CR>
 
 "" behavior normalize
 nnoremap <nowait> <BS> X
-imap <nowait> <S-Tab> <C-d>
+imap <nowait> <S-Tab> <C-o><<
 
 nmap <S-Insert> :put +<CR>
 vmap <S-Insert> p
