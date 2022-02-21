@@ -8,6 +8,8 @@ call plug#begin('~/.vim/plugged')
 
 "" Метки в файлах
 Plug 'kshenoy/vim-signature'
+"" editor
+Plug 'editorconfig/editorconfig-vim'
 
 "" Работа буферами
 Plug 'jeetsukumaran/vim-buffergator'
