@@ -5,10 +5,9 @@ nmap <nowait> <leader>bl :buffers<CR>
 nmap <nowait> <leader>bb :buffers<CR>:buffer 
 nmap <nowait> <leader>, :bprevious<CR>
 nmap <nowait> <leader>. :bnext<CR>
-nmap <nowait> <leader>q :bwipeout<CR>
+nmap <nowait> <leader>q :bdelete<CR>
 
 "" windows
-nmap <nowait> <leader>e :close<CR>
 nmap <nowait> <leader>o :only<CR>
 nmap <nowait> <leader>h :wincmd h<CR>
 nmap <nowait> <leader>j :wincmd j<CR>
@@ -70,6 +69,7 @@ cmap <C-Insert> <C-o>yy
 "noremap <Down> <NOP>
 "noremap <Left> <NOP>
 "noremap <Right> <NOP>
+
 noremap <C-S-Up> ddkP
 noremap <C-S-Down> ddp
 "noremap <C-S-Left> <NOP>
@@ -99,8 +99,8 @@ map <leader>sc :source %<CR>
 map <leader>n :set number relativenumber!<CR>
 
 "" completion
-imap <leader>c <C-n>
-imap <leader>v <C-x><C-o>
+imap <leader><Tab> <C-x><C-Over>
+map <leader><Tab><Tab> <C-n>
 set omnifunc=syntaxcomplete#Complete
 
 "" show hidden symbols
@@ -108,10 +108,10 @@ nmap <leader>sh :set list!<CR>
 set listchars=tab:<->,eol:$,space:.,extends:>,precedes:<,conceal:#,nbsp:_
 
 "" diff
-nmap <leader>ds :diffthis<CR>:wincmd w<CR>:diffthis<CR>
-nmap <leader>df :diffoff<CR>:wincmd w<CR>:diffoff<CR>
+nmap <leader>dds :diffthis<CR>:wincmd w<CR>:diffthis<CR>
+nmap <leader>ddf :diffoff<CR>:wincmd w<CR>:diffoff<CR>
 
-"" scroll
+"" scroll bind
 nmap <leader>sbs gg:set scrollbind<CR>:set scrollfocus<CR>:wincmd w<CR>gg:set scrollbind<CR>:set scrollfocus<CR>
 nmap <leader>sbf :set noscrollbind<CR>:set noscrollfocus<CR>:wincmd w<CR>:set noscrollbind<CR>:set noscrollfocus<CR>
 
@@ -129,3 +129,4 @@ nmap <leader>pp :call lib#path#pwd_from_buffer()<CR>
 nmap <silent> <leader>ses :call lib#sessions#save(input("Save session into: ", lib#sessions#DEFAULT_SESSIONS_DIR . lib#path#cwd_name(), "file"))<CR>
 nmap <silent> <leader>secc :call lib#sessions#save_last()<CR>:echo "current session saved"<CR>
 nmap <silent> <leader>ser :call lib#sessions#load(input("Load session from: ", lib#sessions#DEFAULT_SESSIONS_DIR, "file"))<CR>
+
