@@ -37,6 +37,9 @@ Plug 'w0rp/ale'
 "" Nginx
 Plug 'nginx/nginx'
 
+" Colorscheme
+Plug 'tomasr/molokai'
+colorscheme molokai
 
 call plug#end()
 
