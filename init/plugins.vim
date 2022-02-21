@@ -41,10 +41,10 @@ Plug 'nginx/nginx'
 
 " Colorscheme
 Plug 'tomasr/molokai'
-colorscheme molokai
 
 call plug#end()
 
+colorscheme molokai
 "autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 
 "" mappings
