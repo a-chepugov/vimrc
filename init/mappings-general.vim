@@ -117,11 +117,7 @@ nmap <leader>sbf :set noscrollbind<CR>:set noscrollfocus<CR>:wincmd w<CR>:set no
 "" lib
 source $HOME/.vim/init/lib/index.vim
 
-nmap <leader>es :call lib#trim#strip_trailing_whitespaces()<CR>
-nmap <leader>el :call lib#trim#strip_redundant_lines()<CR>
-nmap <leader>et 
-	\:call lib#trim#strip_redundant_lines()<CR>
-	\:call lib#trim#strip_trailing_whitespaces()<CR>
+nmap <leader>es :call lib#trim#trailing_whitespaces()<CR>
 
 nmap <silent> <leader>re 
 	\:echo "Enter registry name"<CR>
