@@ -83,7 +83,7 @@ nmap n nzz
 nmap N Nzz
 map <C-LeftMouse> <LeftMouse>gf
 
-map <S-F1> :vimgrep<F2>
+nmap <S-F1> :execute "vimgrep " . input("Enter search pattern: ", "") . " " . input("Enter search path: ", "**/*", "file")<CR>
 map <F2> :write<CR>
 imap <F2> <C-o>:write<CR>
 map <C-S-F5> :registers<CR>
