@@ -19,11 +19,11 @@ nmap <nowait> <leader>J :wincmd J<CR>
 nmap <nowait> <leader>K :wincmd K<CR>
 nmap <nowait> <leader>L :wincmd L<CR>
 
-nmap <leader>== :winc
-nmap <leader>- :wincm
-nmap <leader>= :wincm
-nmap <leader>[ :wincm
-nmap <leader>] :wincm
+nmap <nowait> <leader>== :wincmd =<CR>
+nmap <nowait> <leader>- :wincmd -<CR>
+nmap <nowait> <leader>= :wincmd +<CR>
+nmap <nowait> <leader>[ :wincmd [<CR>
+nmap <nowait> <leader>] :wincmd ]<CR>
 
 nmap <leader>wb :set scrollbind!<CR>
 nmap <leader>wt <C-W>T
