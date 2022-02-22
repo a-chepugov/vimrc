@@ -99,8 +99,8 @@ map <leader>sc :source %<CR>
 map <leader>n :set number relativenumber!<CR>
 
 "" completion
-imap <leader><Tab> <C-x><C-Over>
-map <leader><Tab><Tab> <C-n>
+imap <leader><Tab> <C-x><C-o>
+imap <leader><Tab><Tab> <C-n>
 set omnifunc=syntaxcomplete#Complete
 
 "" show hidden symbols
