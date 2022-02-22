@@ -6,6 +6,7 @@ nmap <nowait> <leader>bb :buffers<CR>:buffer
 nmap <nowait> <leader>, :bprevious<CR>
 nmap <nowait> <leader>. :bnext<CR>
 nmap <nowait> <leader>q :bdelete<CR>
+nmap <nowait> <leader>bo :%bdelete\|edit#\|bdelete#<CR>
 
 map <leader>gf  :edit <C-R>=expand('%:h') . '/'<CR><C-R><C-F>
 map <leader>gfs :split <C-R>=expand('%:h') . '/'<CR><C-R><C-F>
