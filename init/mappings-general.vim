@@ -31,12 +31,13 @@ nmap <leader>wt <C-W>T
 "" tabs
 nmap <leader>t :tabnew<CR>
 nmap <leader>tq :tabclose<CR>
-nmap <C-Tab> :tabnext<CR>
-nmap <C-S-Tab> :tabprev<CR>
-nmap <C-F10> :tab ball<CR>
-imap <C-Tab> <C-o>:tabnext<CR>
-imap <C-S-Tab> <C-o>:tabprev<CR>
-imap <C-F10> <C-o>:tab ball<CR>
+
+nmap <nowait> <C-Tab> :tabnext<CR>
+imap <nowait> <C-Tab> <C-o>:tabnext<CR>
+nmap <nowait> <C-S-Tab> :tabprev<CR>
+imap <nowait> <C-S-Tab> <C-o>:tabprev<CR>
+nmap <nowait> <C-F10> :tab ball<CR>
+imap <nowait> <C-F10> <C-o>:tab ball<CR>
 
 nmap <nowait> <leader>1 :tabnext 1<CR>
 nmap <nowait> <leader>2 :tabnext 2<CR>
