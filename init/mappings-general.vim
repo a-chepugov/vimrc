@@ -7,6 +7,11 @@ nmap <nowait> <leader>, :bprevious<CR>
 nmap <nowait> <leader>. :bnext<CR>
 nmap <nowait> <leader>q :bdelete<CR>
 
+map <leader>gf  :edit <C-R>=expand('%:h') . '/'<CR><C-R><C-F>
+map <leader>gfs :split <C-R>=expand('%:h') . '/'<CR><C-R><C-F>
+map <leader>gfv :vsplit <C-R>=expand('%:h') . '/'<CR><C-R><C-F>
+map <leader>gft :tabedit <C-R>=expand('%:h') . '/'<CR><C-R><C-F>
+
 "" windows
 nmap <nowait> <leader>o :only<CR>
 nmap <nowait> <leader>h :wincmd h<CR>
