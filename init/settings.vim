@@ -39,11 +39,13 @@ set wildmenu
 set wildmode=full
 set wildcharm=<Tab>
 
-colorscheme evening
+set termguicolors
+colorscheme koehler
 set background=dark
 
+set guicursor=
 set cursorline
-"set cursorcolumn
+set cursorcolumn
 set mouse=a
 set noerrorbells
 set visualbell
