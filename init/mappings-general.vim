@@ -3,8 +3,8 @@ nmap <nowait> <leader>bl :buffers<CR>
 nmap <nowait> <leader>bb :buffers<CR>:buffer 
 nmap <nowait> <leader>, :bprevious<CR>
 nmap <nowait> <leader>. :bnext<CR>
-nmap <nowait> <leader>q :bdelete<CR>
 nmap <nowait> <leader>bo :%bdelete\|edit#\|bdelete#<CR>
+nmap <nowait> <leader>qw :bdelete<CR>
 
 map <leader>gf  :edit <C-R>=expand('%:h') . '/'<CR><C-R><C-F>
 map <leader>gfs :split <C-R>=expand('%:h') . '/'<CR><C-R><C-F>
@@ -12,6 +12,7 @@ map <leader>gfv :vsplit <C-R>=expand('%:h') . '/'<CR><C-R><C-F>
 map <leader>gft :tabedit <C-R>=expand('%:h') . '/'<CR><C-R><C-F>
 
 "" windows
+nmap <nowait> <leader>qq :quit<CR>
 nmap <nowait> <leader>o :only<CR>
 nmap <nowait> <leader>h :wincmd h<CR>
 nmap <nowait> <leader>j :wincmd j<CR>
@@ -23,17 +24,17 @@ nmap <nowait> <leader>J :wincmd J<CR>
 nmap <nowait> <leader>K :wincmd K<CR>
 nmap <nowait> <leader>L :wincmd L<CR>
 
-nmap <nowait> <leader>== :wincmd =<CR>
-nmap <nowait> <leader>- :wincmd -<CR>
-nmap <nowait> <leader>= :wincmd +<CR>
-nmap <nowait> <leader>[ :wincmd [<CR>
-nmap <nowait> <leader>] :wincmd ]<CR>
+nmap <leader>== :wincmd =<CR>
+nmap <leader>= :wincmd +<CR>
+nmap <leader>- :wincmd -<CR>
+nmap <leader>] :wincmd ><CR>
+nmap <leader>[ :wincmd <<CR>
 
 nmap <leader>wb :set scrollbind!<CR>
 nmap <leader>wt <C-W>T
 
 "" tabs
-nmap <leader>t :tabnew<CR>
+nmap <leader>tn :tabnew<CR>
 nmap <leader>tq :tabclose<CR>
 
 nmap <nowait> <C-Tab> :tabnext<CR>
@@ -56,19 +57,25 @@ nmap <nowait> <leader>0 :tabnext $<CR>
 
 nmap <nowait> <leader>( :tabmove -<CR>
 nmap <nowait> <leader>) :tabmove +<CR>
+nmap <nowait> <C-S-PageUp> :tabmove -<CR>
+nmap <nowait> <C-S-PageDown> :tabmove +<CR>
 
 "" behavior normalize
 nnoremap <nowait> <BS> X
 imap <nowait> <S-Tab> <C-o><<
 
 nmap <S-Insert> :put +<CR>
-vmap <S-Insert> p
+vmap <S-Insert> "+p
 imap <S-Insert> <C-R>+
 cmap <S-Insert> <C-R>+
 nmap <C-Insert> :yank +<CR>
-vmap <C-Insert> y
-imap <C-Insert> <C-o>yy
-cmap <C-Insert> <C-o>yy
+vmap <C-Insert> "+y
+imap <C-Insert> <C-o>"+yy
+cmap <C-Insert> <C-o>"+yy
+nmap <S-Del> :delete +<CR>
+vmap <S-Del> "+d
+imap <S-Del> <C-o>"+dd
+cmap <S-Del> <C-o>"+dd
 
 "noremap <Up> <NOP>
 "noremap <Down> <NOP>
@@ -77,22 +84,23 @@ cmap <C-Insert> <C-o>yy
 
 noremap <C-S-Up> ddkP
 noremap <C-S-Down> ddp
-"noremap <C-S-Left> <NOP>
-"noremap <C-S-Right> <NOP>
+noremap <C-S-Left> vB
+noremap <C-S-Right> vE
 
-nmap <leader><Up> :copen<CR>
-nmap <leader><Down> :cclose<CR>
-nmap <leader><Left> :cprev<CR>
-nmap <leader><Right> :cnext<CR>
+map <nowait> <leader><C-Up> :copen<CR>
+map <nowait> <leader><C-Down> :cclose<CR>
+map <nowait> <leader><C-Left> :cprev<CR>
+map <nowait> <leader><C-Right> :cnext<CR>
 
 nmap n nzz
 nmap N Nzz
 map <C-LeftMouse> <LeftMouse>gf
 
-nmap <S-F1> :execute "vimgrep " . input("Enter search pattern: ", "") . " " . input("Enter search path: ", "**/*", "file")<CR>
 map <F2> :write<CR>
 imap <F2> <C-o>:write<CR>
-map <C-S-F5> :registers<CR>
+nmap <F7> :execute "vimgrep " . "'". input("Enter search pattern: ", "") . "' " . input("Enter search path: ", "**/*")<CR>
+map <F5> :!gio open %<CR>
+map <C-S-F8> :registers<CR>
 map <F9> :emenu <Tab>
 nmap <F10> :buffers<CR>
 map <C-S-F11> :marks<CR>
@@ -129,9 +137,11 @@ nmap <silent> <leader>re
 	\:echo "Enter registry name"<CR>
 	\:call lib#register#edit(getcharstr())<CR>
 
-nmap <leader>pp :call lib#path#pwd_from_buffer()<CR>
+nmap <leader>pp :execute "cd " expand("%:p:h")<CR>:pwd<CR>
+nmap <leader>ppl :execute "lcd " expand("%:p:h")<CR>:pwd<CR>
+nmap <leader>ppt :execute "tcd " expand("%:p:h")<CR>:pwd<CR>
 
-nmap <silent> <leader>ses :call lib#sessions#save(input("Save session into: ", lib#sessions#DEFAULT_SESSIONS_DIR . lib#path#cwd_name(), "file"))<CR>
-nmap <silent> <leader>secc :call lib#sessions#save_last()<CR>:echo "current session saved"<CR>
-nmap <silent> <leader>ser :call lib#sessions#load(input("Load session from: ", lib#sessions#DEFAULT_SESSIONS_DIR, "file"))<CR>
+nmap <leader><F1> :call lib#sessions#load(input("Load session from: ", lib#sessions#DEFAULT_SESSIONS_DIR, "file"))<CR>
+nmap <leader><C-F1> :call lib#sessions#save(input("Save session into: ", lib#sessions#DEFAULT_SESSIONS_DIR . lib#path#cwd_name(), "file"))<CR>
+nmap <leader><C-F1><C-F1> :call lib#sessions#save_last()<CR>:echo "current session saved"<CR>
 
