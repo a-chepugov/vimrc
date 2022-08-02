@@ -1,9 +1,3 @@
-function! lib#path#pwd_from_buffer()
-  let pathname = expand("%:p:h")
-  echo pathname
-  execute 'cd ' pathname
-endfunction
-
 function lib#path#cwd_name()
   let l:cwd = getcwd()
   return fnamemodify(l:cwd, ':t')
