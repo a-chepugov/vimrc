@@ -1,5 +1,3 @@
-let mapleader = " "
-
 "" buffers
 nmap <nowait> <leader>bl :buffers<CR>
 nmap <nowait> <leader>bb :buffers<CR>:buffer 

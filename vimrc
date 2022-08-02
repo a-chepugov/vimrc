@@ -1,4 +1,7 @@
 "" import configs
+
+let mapleader = " "
+
 source $HOME/.vim/init/settings.vim
 source $HOME/.vim/init/mappings-ru.vim
 source $HOME/.vim/init/mappings-general.vim
