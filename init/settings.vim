@@ -70,6 +70,11 @@ set nopaste
 set matchpairs+=<:>,«:»
 set clipboard=unnamedplus
 
+"" filetype related config
+filetype on
+filetype indent on
+filetype plugin on
+
 "" undo
 let output = system('mkdir -p $HOME/.cache/vim/undo')
 set undodir=$HOME/.cache/vim/undo
@@ -82,8 +87,4 @@ set backupdir=~/.cache/vim/backup
 let output = system('mkdir -p $HOME/.cache/vim/swap')
 set dir=~/.cache/vim/swap
 
-"" filetype related config
-filetype on
-filetype indent on
-filetype plugin on
 
