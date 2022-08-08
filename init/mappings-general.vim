@@ -96,20 +96,21 @@ nmap n nzz
 nmap N Nzz
 map <C-LeftMouse> <LeftMouse>gf
 
-map <F2> :write<CR>
-imap <F2> <C-o>:write<CR>
-nmap <F7> :execute "vimgrep " . "'". input("Enter search pattern: ", "") . "' " . input("Enter search path: ", "**/*")<CR>
-map <F5> :!gio open %<CR>
-map <C-S-F8> :registers<CR>
-map <F9> :emenu <Tab>
-nmap <F10> :buffers<CR>
-map <C-S-F11> :marks<CR>
 
 map <leader>sr :source $MYVIMRC<CR>
 map <leader>so :tabnew $MYVIMRC<CR>
 map <leader>sc :source %<CR>
 
 map <leader>n :set number relativenumber!<CR>
+
+
+"" search
+nmap <leader>/ :execute "vimgrep " . "'". input("Enter search pattern: ", "") . "' " . input("Enter search path: ", "**/*")<CR>
+
+"" pwd
+nmap <leader>pp :execute "cd " expand("%:p:h")<CR>:pwd<CR>
+nmap <leader>ppl :execute "lcd " expand("%:p:h")<CR>:pwd<CR>
+nmap <leader>ppt :execute "tcd " expand("%:p:h")<CR>:pwd<CR>
 
 "" completion
 imap <leader><Tab> <C-x><C-o>
@@ -128,20 +129,9 @@ nmap <leader>ddf :diffoff<CR>:wincmd w<CR>:diffoff<CR>
 nmap <leader>sbs gg:set scrollbind<CR>:set scrollfocus<CR>:wincmd w<CR>gg:set scrollbind<CR>:set scrollfocus<CR>
 nmap <leader>sbf :set noscrollbind<CR>:set noscrollfocus<CR>:wincmd w<CR>:set noscrollbind<CR>:set noscrollfocus<CR>
 
-"" lib
-source $HOME/.vim/init/lib/index.vim
-
-nmap <leader>es :call lib#trim#trailing_whitespaces()<CR>
-
-nmap <silent> <leader>re 
-	\:echo "Enter registry name"<CR>
-	\:call lib#register#edit(getcharstr())<CR>
-
-nmap <leader>pp :execute "cd " expand("%:p:h")<CR>:pwd<CR>
-nmap <leader>ppl :execute "lcd " expand("%:p:h")<CR>:pwd<CR>
-nmap <leader>ppt :execute "tcd " expand("%:p:h")<CR>:pwd<CR>
-
-nmap <leader><F1> :call lib#sessions#load(input("Load session from: ", lib#sessions#DEFAULT_SESSIONS_DIR, "file"))<CR>
-nmap <leader><C-F1> :call lib#sessions#save(input("Save session into: ", lib#sessions#DEFAULT_SESSIONS_DIR . lib#path#cwd_name(), "file"))<CR>
-nmap <leader><C-F1><C-F1> :call lib#sessions#save_last()<CR>:echo "current session saved"<CR>
-
+map <F2> :write<CR>
+imap <F2> <C-o>:write<CR>
+map <F3> :buffers<CR>
+map <F4> :marks<CR>
+map <F5> :registers<CR>
+map <F6> :emenu <Tab>
