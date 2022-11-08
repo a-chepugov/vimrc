@@ -82,8 +82,8 @@ cmap <S-Del> <C-o>"+dd
 "noremap <Left> <NOP>
 "noremap <Right> <NOP>
 
-noremap <C-S-Up> ddkP
-noremap <C-S-Down> ddp
+noremap <C-S-Up> v:m '>-2<CR><ESC>
+noremap <C-S-Down> v:m '>+1<CR><ESC>
 noremap <C-S-Left> vB
 noremap <C-S-Right> vE
 
@@ -105,6 +105,7 @@ map <leader>n :set number relativenumber!<CR>
 
 
 "" search
+nmap <leader>/w :execute "vimgrep " . expand("<cword>") . " " . input("Enter search path: ", "**/*")<CR>
 nmap <leader>/ :execute "vimgrep " . "'". input("Enter search pattern: ", "") . "' " . input("Enter search path: ", "**/*")<CR>
 
 "" pwd

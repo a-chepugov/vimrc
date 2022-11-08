@@ -2,6 +2,9 @@ source $HOME/.vim/init/lib/index.vim
 
 nmap <leader>es :call lib#trim#trailing_whitespaces()<CR>
 
+nmap <leader><CR> :call lib#run#cmd(input("Input command: "))<CR>
+
+
 nmap <silent> <leader>re 
 	\:echo "Enter registry name"<CR>
 	\:call lib#register#edit(getcharstr())<CR>

@@ -28,6 +28,9 @@ Plug 'vim-airline/vim-airline'
 "" Langs
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'w0rp/ale'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+
 
 Plug 'eslint/eslint'
 Plug 'nginx/nginx'
